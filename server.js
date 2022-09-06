@@ -1,19 +1,21 @@
 /*
-  - Lab 2.1: Cài đặt Express.js
-Cài đặt và sử dụng thành công Express.js
+  - Lab 2.2: Cài đặt Middleware
+Đăng ký 2 middleware và in ra console log ở mỗi middleware, gọi hàm next để cả 2 dòng console log đều được in ra.
 */
 
 const http = require("http");
+const express = require("express");
+const appServer = express();
 
-const routes = require("./routes");
+appServer.use((req, res, next) => {
+  console.log("First Middleware");
+  next();
+});
 
-//trong thư mục nhận chỉ có 1 hàm
-const server = http.createServer(routes);
+appServer.use((req, res, next) => {
+  console.log("Second Middleware");
+});
 
-//trong thư mục nhận chỉ có nhiều hàm
-/*
-const server = http.createServer(routes.handler);
-const server = http.createServer(routes.someText);
-*/
+const server = http.createServer(appServer);
 
 server.listen(3000);
