@@ -1,6 +1,11 @@
-const http = require('http');
+/*
+  - Lab 2.1: Cài đặt Express.js
+Cài đặt và sử dụng thành công Express.js
+*/
 
-const routes = require('./routes')
+const http = require("http");
+
+const routes = require("./routes");
 
 //trong thư mục nhận chỉ có 1 hàm
 const server = http.createServer(routes);
@@ -11,4 +16,4 @@ const server = http.createServer(routes.handler);
 const server = http.createServer(routes.someText);
 */
 
-server.listen(3000)
+server.listen(3000);
