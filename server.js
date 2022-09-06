@@ -1,6 +1,6 @@
 /*
-  - Lab 2.7: Sử dụng Express Router
-Cài đặt Express Router và chuyển các xử lý ở app.js về các file Router tương ứng.
+  - Lab 2.8: Thêm trang xử lý lỗi 404
+Thêm middleware ở app.js và bắt những đường dẫn mà chưa được định nghĩa rồi trả về một trang với nội dung: "Page not found".
 */
 
 const express = require("express");
@@ -12,5 +12,8 @@ appServer.use(express.urlencoded({ extended: false }));
 
 appServer.use(routerAdmin);
 appServer.use(routerShop);
+appServer.use((req, res) => {
+  res.status(404).send("<h1>Page not found</h1>");
+});
 
 appServer.listen(3000);
