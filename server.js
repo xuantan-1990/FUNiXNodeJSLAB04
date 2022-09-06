@@ -1,6 +1,6 @@
 /*
-  - Lab 2.9: Phân luồng đường dẫn
-cài đặt sao cho Route admin.js sẽ được nối thêm thành http://localhost:3000/admin/.... thay vì http://localhost:3000/....
+  - Lab 2.10: Tạo trang HTML
+Tạo 2 trang HTML giống nhau phần menu. Trang add-product.html là form submit sản phẩm (bao gồm thông tin title) và shop.html là danh sách sản phẩm.
 */
 
 const express = require("express");
