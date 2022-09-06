@@ -1,6 +1,6 @@
 /*
-  - Lab 3.2: Cài đặt & triển khai Pug
-Cài đặt Pug template engine và tạo file shop.pug, chuyển đổi code từ file shop.html qua. Cấu hình để ứng dụng hoạt động với shop.pug.
+  - Lab 3.3: Xuất nội dung động
+  - Tài liệu đọc: Tài liệu PUG chính thống.  Tìm hiểu thêm tại liệu PUG tại https://pugjs.org/api/getting-started.html
 */
 
 const express = require("express");
