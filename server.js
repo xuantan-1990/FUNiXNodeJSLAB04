@@ -1,6 +1,6 @@
 /*
-  - Lab 2.10: Tạo trang HTML
-Tạo 2 trang HTML giống nhau phần menu. Trang add-product.html là form submit sản phẩm (bao gồm thông tin title) và shop.html là danh sách sản phẩm.
+  - Lab 2.11: Cung cấp các trang HTML
+Sử dụng path để lấy đường dẫn file html và trả về client (thay về trả trực tiếp từ string)
 */
 
 const express = require("express");
