@@ -1,6 +1,6 @@
 /*
-  - Lab 2.12: Trả lại trang 404
-Tương tự như trên áp dụng cho trang 404 ở app.js.
+  - Lab 2.13: Sử dụng chức năng trợ giúp để điều hướng
+Tạo object hỗ trợ lấy path ngắn gọn hơn.
 */
 
 const express = require("express");
