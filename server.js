@@ -1,6 +1,6 @@
 /*
-  - Lab 2.13: Sử dụng chức năng trợ giúp để điều hướng
-Tạo object hỗ trợ lấy path ngắn gọn hơn.
+  - Lab 2.14: Cung cấp tệp tĩnh
+ Dẫn link tương đối các file css bằng cách đưa vào folder public/css.
 */
 
 const express = require("express");
@@ -10,6 +10,7 @@ const routerShop = require("./routers/shop");
 const path = require("path");
 
 appServer.use(express.urlencoded({ extended: false }));
+appServer.use(express.static(path.join(__dirname, "public")));
 
 appServer.use("/admin", routerAdmin);
 appServer.use(routerShop);
