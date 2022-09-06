@@ -5,7 +5,7 @@ Cài đặt Express Router và chuyển các xử lý ở app.js về các file 
 
 const express = require("express");
 const appServer = express();
-const routerAdmin = require('./routers/admin')
+const routerAdmin = require("./routers/admin");
 const routerShop = require("./routers/shop");
 
 appServer.use(express.urlencoded({ extended: false }));
