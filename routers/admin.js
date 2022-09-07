@@ -8,6 +8,9 @@ router.get("/add-product", (req, res, next) => {
   res.render("add-product", {
     docTitle: "Add Product",
     path: "/admin/add-product",
+    formsCss:true,
+    productCss:true,
+    activeAddProducts:true
   });
 });
 
