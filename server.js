@@ -1,5 +1,5 @@
 /*
-  - Lab 3.8: Thêm bố cục vào Handlebars
+  - Lab 3.9: Làm việc với EJS
 */
 
 const express = require("express");
@@ -7,10 +7,8 @@ const appServer = express();
 const adminData = require("./routers/admin");
 const routerShop = require("./routers/shop");
 const path = require("path");
-const expressHbs = require("express-handlebars");
 
-appServer.engine("hbs", expressHbs({layoutDir:'views/layouts/', defaultLayout:'main-layout',extname:'hbs'}));
-appServer.set("view engine", "hbs");
+appServer.set("view engine", "ejs");
 appServer.set("views", "views");
 
 appServer.use(express.urlencoded({ extended: true }));
