@@ -1,5 +1,5 @@
 /*
-  - Lab 3.5: Thêm bố cục
+  - Lab 3.7: Chuyển đổi ứng dụng sang Handlebars
 */
 
 const express = require("express");
@@ -7,8 +7,10 @@ const appServer = express();
 const adminData = require("./routers/admin");
 const routerShop = require("./routers/shop");
 const path = require("path");
+const expressHbs = require("express-handlebars");
 
-appServer.set('view engine', 'pug');
+appServer.engine("hbs", expressHbs());
+appServer.set("view engine", "hbs");
 appServer.set("views", "views");
 
 appServer.use(express.urlencoded({ extended: true }));
