@@ -1,5 +1,5 @@
 /*
-  - Lab 3.9: Làm việc với EJS
+  - Lab 3.10: Bố cục với Partials
 */
 
 const express = require("express");
