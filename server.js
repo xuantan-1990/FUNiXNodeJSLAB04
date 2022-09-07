@@ -1,6 +1,5 @@
 /*
-  - Lab 3.3: Xuất nội dung động
-  - Tài liệu đọc: Tài liệu PUG chính thống.  Tìm hiểu thêm tại liệu PUG tại https://pugjs.org/api/getting-started.html
+  - Lab 3.4: Chuyển đổi tệp HTML sang Pug
 */
 
 const express = require("express");
