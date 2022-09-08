@@ -1,5 +1,5 @@
 /*
-  - Lab 4.4: Lưu trữ dữ liệu trong tệp thông qua model
+  - Lab 4.5: Tìm nạp dữ liệu từ các tệp thông qua model
 */
 
 const express = require("express");
