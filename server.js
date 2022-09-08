@@ -1,5 +1,5 @@
 /*
-  - Lab 4.1: Thêm Controller
+  - Lab 4.2: Hoàn thiện Controller
 */
 
 const express = require("express");
@@ -7,6 +7,7 @@ const appServer = express();
 const routerAdmin = require("./routers/admin");
 const routerShop = require("./routers/shop");
 const path = require("path");
+const notFoundError = require('./controllers/errors');
 
 appServer.set("view engine", "ejs");
 appServer.set("views", "views");
@@ -16,8 +17,6 @@ appServer.use(express.static(path.join(__dirname, "public")));
 
 appServer.use("/admin", routerAdmin);
 appServer.use(routerShop);
-appServer.use((req, res) => {
-  res.status(404).render('404',{docTitle:'Page Not Found'});
-});
+appServer.use(notFoundError.getNotFoundError);
 
 appServer.listen(3000);
